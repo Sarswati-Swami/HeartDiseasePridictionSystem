@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(to bottom, #1f5e62, #6fb6bd);
+    color: #fff;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: rgb(185, 224, 224);
+    backdrop-filter: blur(12px);
+    box-shadow:0 8px 25 rgba(0,0,0,0.1) ;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo{
+    font-size: 22px;
+    font-weight: 600;
+    color: black;
+    letter-spacing: 1px;
+}
+
+nav a{
+    margin-left: 20px;
+    text-decoration: none;
+    height: 30px;
+    position: relative;
+    color: rgb(2, 0, 0);
+    transition: 0.3s;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #fffdc1;
+  bottom: -4px;
+  left: 0;
+  transition: 0.3s;
+}
+nav a:hover::after {
+  width: 100%;
+}
+
+
+
+nav a:hover{
+    color:#ffd;
+}
+
+
+.doctormain{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 80px;
+    padding: 100px;
+}
+
+.doctorcard{
+     background: rgb(189, 219, 219);
+    border-radius: 20px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: 0.3s;
+
+}
+
+.doctorcard:hover{
+    transform: translateY(-6px);
+
+}
+
+.doctorcard img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.doctorcontent{
+    padding: 12px;
+}
+
+.doctorcontent h3{
+    margin: 5px 0;
+    color: #0d3b66;
+}
+
+.special {
+    color: #e63946;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+
+.doctorcontent p{
+     margin: 4px 0;
+    font-size: 13px;
+    color: #555;
+}
+
+button{
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background: #0b4656;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #145591;
+}
+
+footer{
+    padding: 20px;
+    text-align: center;
+    background: rgba(0,0,0,0.2);
+
+}

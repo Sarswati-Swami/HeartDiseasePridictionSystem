@@ -1,0 +1,33 @@
+<head>
+        <title>Feedback Form</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='feedbackform.css')}}">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+        <meta name="wght@300;500;600&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="logo">❤️ MyHeart</div>
+            <nav>
+                <a href="{{url_for('userhomeheart')}}">Home</a><!--Home webpage address -->
+                <a href="{{url_for('diseaseinfo')}}">Disease Info</a><!--disease info web page address-->
+                <a href="{{url_for('aboutus')}}">About Us</a><!--about us web page address-->
+
+                <a class="Login-btn" href="{{url_for('home')}}">Logout</a>
+            </nav>
+        </header>
+
+        <section class="feedback">
+            <div class="feedback1">
+                <h1>SEND FEEDBACK</h1>
+                <label>Username</label>
+                <input type="text" placeholder="Enter Username">
+
+                <label>Write Message</label>
+                <textarea placeholder="Write Your Feedback Here..."></textarea>
+
+                <button>Send Feedback</button>
+            </div>
+        </section>
+    </body>
+</html>

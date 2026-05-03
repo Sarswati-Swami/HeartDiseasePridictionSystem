@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(to bottom, #569195, #0a6c74);
+    color: #fff;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: rgb(185, 224, 224);
+    backdrop-filter: blur(12px);
+    box-shadow:0 8px 25 rgba(0,0,0,0.1) ;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo{
+    font-size: 22px;
+    font-weight: 600;
+    color: black;
+    letter-spacing: 1px;
+}
+
+nav a{
+    margin-left: 20px;
+    text-decoration: none;
+    height: 30px;
+    position: relative;
+    color: rgb(2, 0, 0);
+    transition: 0.3s;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #fffdc1;
+  bottom: -4px;
+  left: 0;
+  transition: 0.3s;
+}
+nav a:hover::after {
+  width: 100%;
+}
+
+
+
+nav a:hover{
+    color:#ffd;
+}
+
+.aboutsystem{
+    text-align: center;
+    padding: 60px 20px;
+    animation: fadein 1.5s ease-in-out;
+}
+
+.aboutsystem h1{
+    font-size: 40px;
+}
+
+.aboutwhatwedo{
+    font-size: 20px;
+}
+
+.aboutwhatwedo, .ourmission, .feature, .datainfo{
+     padding: 50px 80px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+
+}
+
+.steps{
+    padding: 50px 80px;
+    text-align: center;
+}
+
+.boxworking{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.boxcontainer{
+    background: rgba(39, 67, 67, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px;
+    width: 250px;
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+.boxcontainer:hover::before{
+    left: 0;
+}
+
+.boxcontainer:hover{
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.note{
+    background: rgba(0,0,0,0.2);
+    margin: 20px 80px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.2);
+}
+
+@keyframes fadein{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

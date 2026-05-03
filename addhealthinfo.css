@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+     background: linear-gradient(to bottom, #94dadf, #0a6c74);
+    color: #333;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+}
+
+.navbar .logo{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.navbar a{
+    margin: 0 10px;
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar a:hover{
+    color:#ff4d6d
+}
+
+.main{
+    text-align: center;
+    padding: 60px 20px;
+    animation: fadeIn 1.5s ease;
+}
+
+.main.h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.form-section {
+    background: rgba(255,255,255,0.3);
+    margin: 30px auto;
+    padding: 30px;
+    width: 85%;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    animation: slideUp 1s ease;
+}
+
+.form-section h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+
+.form-grid input{
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-grid input:focus{
+    box-shadow: 0 0 10px #00c6ff;
+    transform: scale(1.03);
+}
+
+.form-grid .full{
+    grid-column: span 3;
+}
+
+.form-grid button{
+    grid-column: span 3;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-grid button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.card{
+    background: rgba(255,255,255,0.4);
+    padding: 20px;
+    width: 280px;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
+    animation: fadeIn 2s ease;
+}
+
+.card:hover{
+    transform: translateY(-10px) scale(1.05);
+}
+
+footer{
+    text-align: center;
+    padding: 15px;
+}
+
+@keyframes fadeIn{
+    from{opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideUp{
+    from{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

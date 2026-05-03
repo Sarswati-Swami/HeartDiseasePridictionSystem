@@ -1,0 +1,54 @@
+<html>
+    <head><title>Create password</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='createpass.css')}}">
+    </head>
+    <body>
+
+<header class="navbar">
+            <div class="logo">❤️ MyHeart</div>
+            <nav>
+                <a href="{{url_for('home')}}">Home</a><!--Home webpage address -->
+                <a href="{{url_for('diseaseinfo')}}">Disease Info</a><!--disease info web page address-->
+                <a href="{{url_for('aboutus')}}">About Us</a><!--about us web page address-->
+
+                <a class="Login-btn" href="{{url_for('home')}}">Logout</a>
+            </nav>
+        </header>
+
+
+
+        <div class="wrapper">
+            <!--left-->
+            <div class="form-section">
+                
+
+                <h2>Create Password</h2>
+
+                <form>
+                    <label>Create password</label>
+                    <input type="password" placeholder="Enter Password" required>
+
+                    <label>Confirm Password</label>
+                    <input type="password" placeholder="Confirm Password" required>
+
+                    <div class="button">
+                        <button type="button" class="cancel">Cancel</button>
+                        <button type="submit" class="register">Register</button>
+                    </div>
+                </form>
+            </div>
+
+
+            <!--right-->
+            <div class="design-section">
+                <div class="wave"></div>
+
+                <!--<div class="windmills">
+                    <div class="mill"></div>
+                    <div class="mill"></div>
+                    <div class="mill"></div>
+                </div>-->
+            </div>
+        </div>
+    </body>
+</html>

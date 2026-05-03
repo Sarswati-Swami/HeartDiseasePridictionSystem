@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Heart Disease Prediction</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='viewfeedbackform.css')}}">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="logo">❤️ MyHeart</div>
+            <nav>
+                <a href="{{url_for('admindashboardform')}}">Home</a><!--Home webpage address -->
+                <a href="{{url_for('diseaseinfo')}}">Disease Info</a><!--disease info web page address-->
+                <a href="{{url_for('aboutus')}}">About Us</a><!--about us web page address-->
+
+                <a class="Login-btn" href="loginheart.html">Login</a>
+            </nav>
+            <button class="adminbtn">ADMIN</button>
+        </header>
+
+
+     <div class="viewfeedback">
+        <h2>VIEW FEEDBACKS</h2>
+
+         <div class="toptable">
+                <div></div>
+                <div class="searchbox">
+                    <label>Search</label>
+                    <input type="text" placeholder="type here...">
+                    </div>
+        </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Contact</th>
+                        <th>Messages</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td colspan="6" class="empty">
+                        No data available in table
+                    </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="footertable">
+                    <p>Showing 0 to 0 of 0 entries</p>
+                    <div class="pagin">
+                        <span>Previous</span>
+                        <span>Next</span>
+                    </div>
+            </div>
+     </div>
+
+     <div class="footer">
+        <p>© 2026 Heart Disease Prediction</p>
+
+     </div>
+    </body>
+</html>

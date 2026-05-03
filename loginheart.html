@@ -1,0 +1,69 @@
+<html>
+    <head><title>Login Page</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    </head>
+   <body>
+<header class="navbar">
+            <div class="logo">❤️ MyHeart</div>
+            <nav>
+                <a href="{{url_for('home')}}" >Home</a><!--Home webpage address -->
+                <a href="{{url_for('diseaseinfo')}}">Disease Info</a><!--disease info web page address-->
+                <a href="{{url_for('aboutus')}}">About Us</a><!--about us web page address-->
+
+                <div class="dropdown">
+                     <a class="Login-btn">Login ▾</a>
+                               <div class="dropdown-content">
+                                       <a href="{{url_for('userlogin')}}">User Login</a>
+                                           <a href="{{url_for('adminlogin')}}">Admin Login</a>
+                                 </div>
+                 </div>
+            </nav>
+        </header>
+
+
+ <div class="container">
+    <!--left section-->
+    <div class="left">
+
+        
+
+        <h2>Your heart's health matter and early prediction can make  all the difference.</h2>
+        <div class="icon">
+            🩺
+        </div>
+    </div>
+    <!--right section-->
+    <div class="right">
+        <h2>Login</h2>
+
+        <form method="POST" action="/loginsucc">
+            <div class="input-box">
+                <input type="text" placeholder="Username" name="email" required>
+            </div>
+
+            <div class="input-box">
+                <input type="password"placeholder="password" name="password" required>
+            </div>
+
+            <div class="links">
+                <!-- forgot password page link -->
+                 <a href="{{url_for('updatepass')}}" > Forgot Password</a>
+            </div>
+
+            <a href="{{url_for('loginsucc')}}" ><button  type="submit">Login</button></a>
+
+            <p class="register">
+                Don't have an account?
+                <a href="{{url_for('patientreg')}}" >Register here</a>
+                <!--register page link-->
+            </p>
+            
+            
+        </form>
+    </div>
+ </div>
+
+
+   </body> 
+</html>

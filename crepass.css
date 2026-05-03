@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "segoe UI",sans-serif;
+}
+
+body{
+   /* background: #eee;*/
+    background: linear-gradient(to bottom, #b9e7ea, #0a6c74);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.navbar{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 70px;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: rgb(185, 224, 224);
+    backdrop-filter: blur(12px);
+    box-shadow:0 8px 25 rgba(0,0,0,0.1) ;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo{
+    font-size: 22px;
+    font-weight: 600;
+    color: black;
+    letter-spacing: 1px;
+}
+
+nav a{
+    margin-left: 20px;
+    text-decoration: none;
+    height: 30px;
+    position: relative;
+    color: rgb(2, 0, 0);
+    transition: 0.3s;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #fffdc1;
+  bottom: -4px;
+  left: 0;
+  transition: 0.3s;
+}
+nav a:hover::after {
+  width: 100%;
+}
+
+
+
+nav a:hover{
+    color:#ffd;
+}
+
+
+
+
+
+
+@keyframes fadeslide{
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.wrapper{
+    width:900px;
+    height: 450px;
+    background: white;
+    display: flex;
+    border-radius: 12px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+    overflow: hidden;
+    animation: fadeslide 1s ease forwards;
+}
+
+.form-section{
+    width: 45%;
+    padding: 40px;
+}
+
+input{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid#ccc;
+    padding: 10px 5px;
+    margin-bottom: 30px;
+    outline: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+
+input:focus{
+    border-color:#0a6c74;
+    box-shadow: 0 8px 15px -10px #8e97bd;
+    transform: scale(1.02);
+}
+
+.logo{
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+h2{
+    margin-bottom: 30px;
+    color: #333;
+}
+
+label{
+    font-size: 14px;
+    color: #666;
+}
+
+.button{
+    padding: 10px 28px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.cancel{
+    background: #e0e0e0;
+    height: 40px;
+    width: 100px;
+}
+
+.register{
+    background: linear-gradient(135deg, #59d0d2, #75c3ca);
+    color: white;
+     height: 40px;
+    width: 100px;
+}
+
+button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.design-section{
+    width: 55%;
+    background: linear-gradient(135deg, #a7dce0, #08656d);
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes wavemove{
+    0%{transform: translateX(0);}
+    50%{transform: translateX(-30px);}
+    100%{transform: translateX(0);}
+}
+
+.wave{
+    position: absolute;
+    bottom: -80px;
+    left: -100px;
+    width: 130%;
+    height: 260px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 50%;
+    animation: wavemove 6s ease-in-out infinite;
+}
+
+.windmills{
+    position: absolute;
+    bottom: 40px;
+    left: 70px;
+    display: flex;
+    gap: 70px;
+}
+
+@keyframes rotate{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.mill{
+    width: 45px;
+    height: 140px;
+    background: rgba(255,255,255,0.65);
+    border-radius: 10px;
+    animation: rotate 12s linear infinite;
+}

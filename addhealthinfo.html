@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Heart Disease Info</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='addhealthinfo.css')}}">
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="logo">❤️ MyHeart</div>
+            <nav>
+                <a href="{{url_for('userhomeheart')}}">Home</a>
+                <a href="{{url_for('diseaseinfo')}}">Disease Info</a>
+                <a href="{{url_for('aboutus')}}">About Us</a>
+
+                <a class="Login-btn" href="{{url_for('home')}}">Logout</a>
+            </nav>
+        </header>
+
+        <section class="main">
+            <div class="main-text">
+                <h1>Heart Disease Prediction</h1>
+                <p>Early detection can save lives. Enter your details below to
+                    analyze your heart health.
+                </p>
+            </div>
+        </section>
+
+
+        <section class="form-section">
+            <h2>Add Heart Detail</h2>
+
+        <form class="form-grid" action="/healthresult" method="post" required>
+            <input type="number" name="txtage" placeholder="Age"required>
+            <input type="number" placeholder="Sex" name="txtsex">
+            <input type="number" placeholder="Chest Pain" name="txtchestpain"required>
+            <input type="number" placeholder="Resting BP" name="txtrestingbp"required>
+            <input type="number" placeholder="Cholesterol" name="txtcholestrol"required>
+            <input type="number" placeholder="Fasting BS" name="txtfastingbs"required>
+            <input type="number" placeholder="ECG" name="txtecg"required>
+            <input type="number"placeholder="Max Heart Induced" name="txtmaxheartinduced"required>
+            <input type="number" placeholder="Exercise Arresrt" name="txtexercisearrest" step="any" required>
+            <input type="number" placeholder="Oldpeak" name="txtoldpeak"required>
+            <input type="number" placeholder="Slope" name="txtslope"required>
+            <input type="number" placeholder="Cardiac Arrest" name="txtcardiacarrest"required>
+            <input class="full" type="number" placeholder="Thalassemia" name="txtthalassemia">
+             <button type="submit">Send Heart Data</button>
+        </form>
+            <h3>{{prediction_text}}</h3>
+        </section>
+
+
+        <section class="cards">
+            <div class="card">
+                <h3>What is Heart Disease</h3>
+                <p>Heart disease refers to conditions affecting heart and blood vessels.
+                     It is one of the leading causes of death but can be prevented.</p>
+</div>
+
+            <div class="card">
+                <h3>Common Causes</h3>
+                <ul>
+                    <li>High blodd pressure</li>
+                    <li>High cholesterol</li>
+                    <li>Smoking</li>
+                    <li>Obesity</li>
+                </ul>
+            </div>
+
+
+                <div class="card">
+                    <h3>Symptoms</h3>
+                    <ul>
+                        <li>Chest pain</li>
+                        <li>Breathlessness</li>
+                        <li>Fatigue</li>
+                        <li>Dizziness</li>
+                    </ul>
+                 </div>
+        </section>
+
+
+        <footer>
+            <p>2026 Heart Prediction System</p>
+        </footer>
+    </body>
+</html>

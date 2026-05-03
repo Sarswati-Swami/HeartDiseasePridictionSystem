@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <title>Heart Disease Prediction</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='homeheart.css')}}"><link href="/static/css2">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="logo">❤️ MyHeart</div>
+            <nav>
+                <a href="{{url_for('userhomeheart')}}">Home</a><!--Home webpage address -->
+                <a href="{{url_for('diseaseinfo')}}">Disease Info</a><!--disease info web page address-->
+                <a href="{{url_for('aboutus')}}">About Us</a><!--about us web page address-->
+
+                <a href="{{url_for('home')}}">Logout</a>
+                 </div>
+            </nav>
+        </header>
+
+        <!--main section-->
+        <section class="mainn">
+            <div class="mainn-text">
+                
+           
+                <h4 class="small-title">professional medical service</h4>
+       <h1 class="slide-text">
+          Your Heart Is In<br>
+          <span class="highlight">GOOD HANDS</span></h1>
+       <h1><br>The Best Medical<br><span>Heart Disease Prediction</span></h1>
+       <p>Our Heart Disease Prediction System combines medical expertise with machine learning technology to deliver accurate, reliable and early prediction for better heart care.</p>
+
+
+                <a href="/addhealthinfo"><button class="mainn-btn">Check Prediction</button></a>
+       </div>
+
+       <div class="mainn-img ring-container">
+        <div class="ring ring1"></div>
+       <div class="ring ring2"></div>
+       <div class="ring ring3"></div>
+       <img src="/static/images/doctorimg2-removebg-preview.png" alt="Doctor">
+       </div>
+
+       </section>
+
+
+        <div class="mainn-img">
+            <img src="/static/images/doctorpatient-removebg-preview.png" alt="Doctorpatient">
+            <div class="circle"></div>
+        </div>
+    
+        <div class="stats">
+            <div><h3>24/7</h3><p>Support</p></div>
+            <div><h3>ML</h3><p>Prediction</p></div>
+            <div><h3>100%</h3><p>Secure</p></div>
+            <div><h3>99%</h3><p>Accuracy</p></div>
+        </div> 
+
+
+
+
+
+           <!-- <h1 class="slide-text">
+                Your Heart Is In <br><span class="highlight">Good Hands!</span></h1>
+
+                <h1><br>The Best Medical<br><span>Heart Disease Prediction</span></h1>
+                <p>
+                    <br>Early prediction of heart disease using machine learning
+                    helps save lives by detecting risks at an early stage.
+                    </p>
+
+                    <p>Our Heart Disease Prediction System uses advanced Machine Learning
+      algorithms to analyze vital medical parameters and predict heart
+      disease at an early stage. Early detection helps in timely treatment
+      and saves lives.</p>
+
+                    <button class="mainn-btn">Check Prediction</button>
+                    <div class="stats">
+                        <div><h3>24/7</h3><p>Support</p></div>
+                        <div><h3>ML</h3><p>Prediction</p></div>
+                        <div><h3>100%</h3><p>Secure</p></div>
+                        <div><h3>99%</h3><p>Accuracy</p></div>
+                    </div>
+            </div>
+
+            <div class="mainn-img">
+                <img src="doctorimg2-removebg-preview.png" alt="Doctor">
+                <div class="circle"></div>
+            </div>
+        </section>  -->
+
+        <!--card section-->
+        <section class="cards">
+            <div class="card">
+                <img src="/static/images/heartinfo.jpeg"><!--heart img-->
+                <h3>Heart Disease Info</h3>
+                <p>
+                    Learn about heart disease causes, symptoms, risk factorsand prevention methods
+                    to stay informed and healthy.
+                </p>
+            </div>
+            <div class="card">
+                <img src="/static/images/imgprediction.jpeg"><!--img hospital-->
+                <h3>ML Prediction</h3>
+                <p>Accurate heart disease prediction using machine learning models trained on real medical datasets.</p>
+
+            </div>
+
+            <div class="card">
+                <img src="/static/images/imgexpertgud.jpeg"><!--img doctor-->
+                <h3>Expert Guidance</h3>
+                <p>
+                    Medical awareness and guidance supported by data-driven insights advanced
+                    professional healthcre knowledge.
+                </p>
+            </div>
+        </section>
+
+        <section class="trust">
+            <h2>Why Choose MyHeart AI?</h2>
+            <div class="trust-box">
+             <p>✔ Clinically Inspired ML Models</p>
+             <p>✔ Secure Patient Data</p>
+             <p>✔ Fast & Accurate Results</p>
+             <p>✔ Designed for Early Detection</p>
+             </div>
+        </section>
+
+        
+
+
+       <footer>
+        <p>© 2026 MyHeart | AI-based Medical Prediction System</p>
+       </footer>
+
+        
+<script src="script.js"></script>
+        
+
+    </body>
+</html>

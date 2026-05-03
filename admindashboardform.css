@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(to bottom, #94dadf, #095d65);
+    color: #fff;
+    font-family: 'poppins',sans-serif;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: rgb(185, 224, 224);
+    backdrop-filter: blur(12px);
+    box-shadow:0 8px 25px rgba(0,0,0,0.1) ;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo{
+    font-size: 22px;
+    font-weight: 600;
+    color: black;
+    letter-spacing: 1px;
+}
+
+nav a{
+    margin-left: 20px;
+    text-decoration: none;
+    height: 30px;
+    position: relative;
+    color: rgb(2, 0, 0);
+    transition: 0.3s;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #fffdc1;
+  bottom: -4px;
+  left: 0;
+  transition: 0.3s;
+}
+nav a:hover::after {
+  width: 100%;
+}
+
+
+nav a:hover{
+    color:#ffd;
+}
+
+.dashboard{
+    padding: 40px;
+    background: linear-gradient(to bottom, #94dadf, #0a6c74);
+    min-height: 100dvh;
+    color: black;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 100px;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.dashboard1{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+}
+
+.box{
+    padding: 30px;
+    color: black;
+    text-align: center;
+    transition: 0.4s;
+    border-radius: 15px;
+    animation: fadein 1s ease-in;
+}
+
+.box h2{
+   font-size: 40px;
+}
+
+.box p{
+    margin: 10px 0;
+}
+
+.box button{
+   color: black;
+   background: white;
+   cursor: pointer;
+   border-radius: 6px;
+   border: none;
+   padding: 8px 12px;
+   margin-top: 10px;
+
+}
+
+.box button:hover{
+    background:black;
+    color: white;
+}
+
+.blue{
+    background: rgba(5, 19, 19, 0.3);
+}
+
+.green{
+    background: rgba(5, 19, 19, 0.3);
+}
+
+.purple{
+  background: rgba(5, 19, 19, 0.3);
+}
+
+.dark{
+    background: rgba(5, 19, 19, 0.3);
+}
+
+.box:hover{
+    transform: translateY(-10px) scale(1.03);
+}
+
+
+.info{
+    margin: 50px auto;
+    max-width: 900px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.info h2{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.info p{
+    font-size: 15px;
+    opacity: o.8;
+}
+
+.heart_feature{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 12px;
+}
+
+
+footer{
+    padding: 20px;
+    text-align: center;
+    background: rgba(0,0,0,0.2);
+
+}

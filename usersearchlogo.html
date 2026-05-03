@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>Heart Disease Prediction</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='usersearchlogo.css')}}">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--google font-->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+        <!--table css-->
+        <link href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css"
+        rel="stylesheet">
+        <link href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css"
+        rel="stylesheet">
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="logo">❤️ MyHeart</div>
+            <nav>
+                <a href="{{url_for('admindashboardform')}}">Home</a><!--Home webpage address -->
+                <a href="{{url_for('diseaseinfo')}}">Disease Info</a><!--disease info web page address-->
+                <a href="{{url_for('aboutus')}}">About Us</a><!--about us web page address-->
+
+                <a class="Login-btn" href="{{url_for('home')}}">Logout</a>
+            </nav>
+            <div class="user">Hello, Billie ▼
+            </div>
+        </header>
+
+        <div class="searchbox">
+            <h1 class="title">SEARCH LOGS</h1>
+
+            <table id="logtable" class="display">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Date</th>
+                        <th>Accuracy</th>
+                        <th>Result</th>
+                        <th>HeartValue</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--no user data -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- FOOTER -->
+<div class="footer">
+    © 2026 Heart Disease Prediction
+</div>
+
+
+<!--query-->
+
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+<!-- DataTables -->
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+
+
+<!-- Buttons -->
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.print.min.js"></script>
+
+<!-- INIT -->
+<script>
+$(document).ready(function() {
+    $('#logtable').DataTable({
+        dom: 'Bfrtip',
+        buttons: ['copy', 'excel', 'csv', 'pdf'],
+        paging: true,
+        searching: true,
+        info: true,
+        ordering: true
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Heart Disease Prediction</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='admindashboardform.css')}}">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="logo">❤️ MyHeart</div>
+            <nav>
+                <a href="{{url_for('admindashboardform')}}">Home</a><!--Home webpage address -->
+                <a href="{{url_for('diseaseinfo')}}">Disease Info</a><!--disease info web page address-->
+                <a href="{{url_for('aboutus')}}">About Us</a><!--about us web page address-->
+
+                <a class="Login-btn" href="{{url_for('home')}}">Logout</a>
+            </nav>
+        </header>
+
+        <section class="dashboard">
+            <h1 class="title">Admin Dashboard</h1>
+
+            <div class="dashboard1">
+                <div class="box blue">
+                    <h2>0</h2>
+                    <p>Total Doctors</p>
+                    <a href="{{url_for('doctordetailadmin')}}"> <button>View Details</button></a>
+                </div>
+
+                <div class="box green">
+                    <h2>1</h2>
+                    <p>Total Patient</p>
+                    <a href="{{url_for('patientdetailadmin')}}"><button>View Details</button></a>
+                </div>
+
+                <div class="box purple">
+                    <h2>0</h2>
+                    <p>Total Feedback</p>
+                    <a href="{{url_for('viewfeedbackform')}}"><button>View Details</button></a>
+                </div>
+
+                <div class="box dark">
+                    <h2>0</h2>
+                    <p>Search Count</p>
+                    <a href="{{url_for('usersearchlogo')}}" ><button>View Details</button></a>
+                </div>
+             </div>
+
+<div class="info">
+    <h2>About Heart Disease Prediction system</h2>
+    <p>
+        This system uses machine learning to analyze patient health data and predict the risk of heart disease.
+        It helps doctor and users make early decisions for better treatment and prevention.
+    </p>
+
+    <div class="heart_feature">
+        <div>✔Predict heart disease risk instantly</div>
+        <div>✔Manage patient and doctor records</div>
+        <div>✔Track system activity and feedback</div>
+        <div>✔Improve healthcare decisions with data</div>
+    </div>
+</div>
+        </section>
+
+        <footer>
+            <p>© 2026 Heart Disease Prediction System</p>
+        </footer>
+     </body>
+</html>

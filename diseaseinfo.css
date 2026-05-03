@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(to bottom, #94dadf, #0a6c74);
+     color: #333;
+}
+
+
+
+.navbar{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: rgb(185, 224, 224);
+    backdrop-filter: blur(12px);
+    box-shadow:0 8px 25 rgba(0,0,0,0.1) ;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logo{
+    font-size: 22px;
+    font-weight: 600;
+    color: black;
+    letter-spacing: 1px;
+}
+
+nav a{
+    margin-left: 20px;
+    text-decoration: none;
+    height: 30px;
+    position: relative;
+    color: rgb(2, 0, 0);
+    transition: 0.3s;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #fffdc1;
+  bottom: -4px;
+  left: 0;
+  transition: 0.3s;
+}
+nav a:hover::after {
+  width: 100%;
+}
+
+
+
+nav a:hover{
+    color:#ffd;
+}
+
+.main{
+    margin-top: 10px;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main h1{
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.main p{
+    font-size: 20px;
+}
+
+.main-img{
+    width: 250px;
+    border-radius: 25px;
+}
+
+.info-section{
+    padding: 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 30px;
+}
+
+.heart-info{
+    background: rgb(255,255,255,0.7);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.heart-info:hover{
+    transform: translateY(-15px) scale(1.03);
+    background: rgba(255,255,255,0.35);
+}
+
+.heart-info img{
+    width: 70px;
+    margin-bottom: 15px;
+}
+
+.heart-info h2{
+    color: #0d9488;
+    margin-bottom: 10px;
+}
+
+.heart-info p{
+    font-size: 15px;
+}
+
+.heart-info ul{
+    font-size: 20px;
+}
+
+.split-section{
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.split-section img{
+    width: 250px;
+    border-radius: 25px;
+}
+
+.split-section p{
+    font-size: 20px;
+}
+
+footer{
+    padding: 20px;
+    text-align: center;
+    background: rgba(1, 16, 16, 0.2);
+
+}

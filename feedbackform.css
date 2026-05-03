@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(to bottom, #94dadf, #0a6c74);
+    color: #fff;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: rgb(185, 224, 224);
+    backdrop-filter: blur(12px);
+    box-shadow:0 8px 25 rgba(0,0,0,0.1) ;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo{
+    font-size: 22px;
+    font-weight: 600;
+    color: black;
+    letter-spacing: 1px;
+}
+
+nav a{
+    margin-left: 20px;
+    text-decoration: none;
+    height: 30px;
+    position: relative;
+    color: rgb(2, 0, 0);
+    transition: 0.3s;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #fffdc1;
+  bottom: -4px;
+  left: 0;
+  transition: 0.3s;
+}
+nav a:hover::after {
+  width: 100%;
+}
+
+
+
+nav a:hover{
+    color:#ffd;
+}
+
+.feedback{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 70px);
+}
+
+.feedback1{
+    width: 380px;
+    padding: 35px;
+    border-radius: 15px;
+    color: black;
+
+    background: rgba(255,255,255,0.85);
+    box-shadow: 0 15px 40px rgb(0,0,0,0.3);
+    animation: fadeup 0.8s ease;
+
+}
+
+.feedback1 h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.feedback1 label{
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+}
+
+.feedback1 input,
+.feedback1 textarea{
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.feedback1 input:focus,
+.feedback1 textarea:focus{
+    border-color: #2193b0;
+    box-shadow: 0 0 5px rgba(33,147,176,0.5);
+}
+
+.feedback1 textarea{
+    height: 100px;
+}
+
+.feedback1 button{
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+   /* background: linear-gradient(135deg,#ff416c,#ff4b2b);*/
+   background: linear-gradient(135deg,#23a2ad,#0d646c);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.feedback1 button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(65, 157, 255, 0.4);
+}
+
+@keyframes fadeup{
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>My Detail</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='patientdetailadmin.css')}}">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="logo">❤️ MyHeart</div>
+            <nav>
+                <a href="{{url_for('admindashboardform')}}">Home</a><!--Home webpage address -->
+                <a href="{{url_for('diseaseinfo')}}">Disease Info</a><!--disease info web page address-->
+                <a href="{{url_for('aboutus')}}">About Us</a><!--about us web page address-->
+                <a class="Login-btn" href="{{url_for('home')}}">Logout</a>
+
+            </nav>
+            <button class="admin">ADMIN</button>
+        </header>
+
+        <div class="patientdetail">
+            <h2>PATIENT DETAILS</h2>
+
+            <div class="patientcontrol">
+                <div class="leftbtn">
+                    <button>Copy</button>
+                    <button>Excel</button>
+                    <button>CSV</button>
+                    <button>PDF</button>
+                </div>
+
+                <div class="search">
+                    Search:
+                    <input type="text">
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Contact</th>
+                        <th>Address</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Billie Eilish</td>
+                        <td>billie@gmail.com</td>
+                        <td>8023344523</td>
+                        <td>chennai</td>
+                        <td><button class="delete">🗑</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="tdbottom">
+                <div>Showing 1 to 1 of entries</div>
+                <div class="pagin">
+                    <button>Previous</button>
+                    <button class="active">1</button>
+                    <button>Next</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            © 2026 Heart Disease Prediction
+        </div>
+        </body>
+        </html>

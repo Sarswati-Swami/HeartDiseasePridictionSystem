@@ -1,0 +1,449 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(to bottom, #94dadf, #0a6c74);
+    color: #fff;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: rgb(185, 224, 224);
+    backdrop-filter: blur(12px);
+    box-shadow:0 8px 25 rgba(0,0,0,0.1) ;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo{
+    font-size: 22px;
+    font-weight: 600;
+    color: black;
+    letter-spacing: 1px;
+}
+
+nav a{
+    margin-left: 20px;
+    text-decoration: none;
+    height: 30px;
+    position: relative;
+    color: rgb(2, 0, 0);
+    transition: 0.3s;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #fffdc1;
+  bottom: -4px;
+  left: 0;
+  transition: 0.3s;
+}
+nav a:hover::after {
+  width: 100%;
+}
+
+
+
+nav a:hover{
+    color:#ffd;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Login button styling */
+.Login-btn {
+    margin-left: 20px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* Dropdown content hidden by default */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: rgb(216, 223, 223);
+    min-width: 150px;
+    top: 30px;
+    right: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    z-index: 999;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.dropdown-content a:hover {
+    background: #213a3c;
+    color: white;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* main */
+
+.mainn{
+    display: flex;
+    padding: 40px;
+    color: black;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainn-text{
+    width: 100%;
+    animation: slideleft 1s ease;
+}
+
+.mainn-text h1{
+    font-size: 48px;
+    line-height: 1.2;
+}
+
+.mainn-text span{
+    color: #ffe;
+}
+
+.mainn-text p{
+    font-size: 26px;
+    opacity: 0.9;
+    max-width: 480px;
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.mainn-btn{
+    padding: 12px 25px;
+    border: none;
+    margin-top: 30px;
+    background: white;
+    color: #0a6c74;
+    font-size: 26px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(255,255,255,0.6);
+}
+
+.mainn-btn:hover{
+    transform: scale(1.05);
+}
+
+
+.stats{
+    display: flex;
+    margin-left: 30px;
+    font-size: 20px;
+    gap: 40px;
+    margin-top: 20px;
+
+
+}
+
+.stats h3{
+    font-size: 26px;
+}
+
+.mainn-img{
+    position: relative;
+    width: 920px;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: none;
+    background-color: transparent;
+    animation: slideRight 1s ease;
+
+
+
+}
+
+.mainn-img img{
+    width: 300px;
+    height: auto;
+    z-index: 2;
+    position: relative;
+}
+
+.circle{
+    width: 360px;
+    height: 360px;
+   /* background: rgba(255,255,255,0.2);*/
+    background: radial-gradient(circle, rgba(255,255,255,0.35), transparent);
+    border-radius: 50%;
+    position: absolute;
+    animation: pulse 4s infinite;
+    bottom: 0;
+    z-index: 1;
+}
+
+@keyframes pulse{
+    0%{transform: scale(1);opacity: 0.6;}
+    50%{transform: scale(1.08);opacity: 1;}
+    100%{transform: scale(1);opacity: 0.6;}
+}
+
+/* card section */
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 80px 60px;
+
+}
+
+.card{
+    background: rgba(255,255,255,0.25);
+    padding: 25px;
+    width: 260px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    transition: 0.4s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card img{
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+.card:hover{
+    transform: translateY(-15px) scale(1.03);
+    background: rgba(255,255,255,0.35);
+}
+
+/animation/
+
+@keyframes slideleft{
+    from{transform: translateX(50px);opacity: 0;}
+    to{transform: translateX(0);opacity: 1;}
+}
+
+@keyframes slideRight{
+    from{transform: translateX(50px);opacity: 0;}
+    to{transform: translateX(0);opacity: 1;}
+}
+
+.trust{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.trust h2{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.trust-box{
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+
+/how it works/
+.how-works{
+    padding: 80px;
+    width: 30px;
+    text-align: center;
+}
+
+.steps{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.step span{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+footer{
+    padding: 20px;
+    text-align: center;
+    background: rgba(0,0,0,0.2);
+
+}
+
+
+/animation/
+.fade-in{
+    animation: fadein 1.2s ease-in;
+}
+
+.delay{
+    animation-delay: 0.5s;
+}
+
+.slide-up{
+    animation: slideup 1s ease-in;
+}
+
+.slide-left{
+    animation: slideleft 1.2s ease-in;
+}
+
+.reveal{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s;
+}
+
+.reveal.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+@keyframes fadein{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+
+@keyframes slideup{
+    from{transform: translateY(40px); opacity: 0;}
+    to{transform: translateY(0); opacity: 1;}
+}
+
+
+@keyframes slideleft{
+    from{transform: translateY(50px); opacity: 0;}
+    to{transform: translateX(0); opacity: 1;}
+}
+
+.slide-text{
+    font-size: 48px;
+    line-height: 1.2;
+    animation: textslide 1.2s ease forwards;
+}
+s
+.highlight{
+    color: #94231d;
+    display: inline-block;
+    animation: glow 2s infinite alternate;
+}
+
+
+@keyframes textslide{
+    from{
+        opacity: 0; transform: translateY(-40px);
+    }
+    to{
+        opacity: 1; transform: translateY(0);
+    }
+}
+
+
+@keyframes glow{
+    from{text-shadow: 0 0 5px black;}
+    to{text-shadow: 0 0 15px rgb(15, 31, 35);}
+}
+
+
+
+.medical-hero{
+    background: #eaf6fb;
+    color: #0a3c44;
+    min-height: 85vh;
+}
+
+.small-title{
+    color:#2a7dbf;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+
+.medical-hero h1{
+    font-size: 46px;
+    font-weight: 600;
+}
+
+.medical-hero p{
+    color: #4a6b72;
+    max-width: 500px;
+}
+
+
+.medical-hero .mainn-btn{
+    background: #2a7dbf;
+    color: white;
+    border-radius: 5px;
+}
+
+.ring-container{
+    position: relative;
+}
+
+.ring{
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(42, 125, 191, 0.3);
+    z-index: 1;
+}
+
+.ring1{
+    width: 320px;
+    height: 320px;
+}
+
+.ring2{
+    width: 380px;
+    height: 380px;
+}
+
+.ring3{
+    width: 440px;
+    height: 440px;
+}
+
+.medical-hero .mainn-img img{
+    width: 300px;
+    z-index: 2;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+}
+
+
+.ring{
+    animation: pulseRing 3s infinite alternate;
+}
+
+
+@keyframes pulseRing{
+    from{transform: scale(1);}
+    to{transform: scale(1.05);}
+}

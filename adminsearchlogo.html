@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>Admin - search logs</title>
+        <link rel="stylesheet" href="{{url_for('static',filename='adminsearchlogos.css')}}">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--datatable css-->
+      <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+
+    <!-- Buttons CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css">
+
+
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="logo">❤️ MyHeart</div>
+            <nav>
+                <a href="{{url_for('admindashboardform')}}">Home</a><!--Home webpage address -->
+                <a href="{{url_for('diseaseinfo')}}">Disease Info</a><!--disease info web page address-->
+                <a href="{{url_for('aboutus')}}">About Us</a><!--about us web page address-->
+                <a href="">Contact</a><!--contact us page address-->
+                <a class="Login-btn" href="{{url_for('home')}}">Logout</a>
+
+            </nav>
+            <button class="btnadmin">ADMIN</button>
+        </header>
+
+        <div class="adminsearchlogs">
+            <h1 class="title">SEARCH LOGS</h1>
+
+            <table id="searchTable" class="display">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Patient Name</th>
+                        <th>Accuracy</th>
+                        <th>Result</th>
+                        <th>Heart Value</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--empty no data-->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            © 2026 Heart Disease Prediction
+        </div>
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- DataTables -->
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
+<!-- Required for export -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+
+<!-- Buttons -->
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.print.min.js"></script>
+
+<!-- INIT -->
+<script>
+$(document).ready(function () {
+    $('#searchTable').DataTable({
+        dom: 'Bfrtip',
+        buttons: ['copy', 'excel', 'csv', 'pdf', 'print'],
+        language: {
+            emptyTable: "No search logs available"
+        }
+    });
+});
+</script>
+
+
+
+
+
+        </body>
+        </html>

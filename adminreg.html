@@ -1,0 +1,49 @@
+<html>
+    <head><title>Patient Regeistration</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='register.css')}}">
+
+    </head>
+    <body>
+<header class="navbar">
+            <div class="logo">❤️ MyHeart</div>
+            <nav>
+                <a href="{{url_for('home')}}" >Home</a><!--Home webpage address -->
+                <a href="{{url_for('diseaseinfo')}}">Disease Info</a><!--disease info web page address-->
+                <a href="{{url_for('aboutus')}}">About Us</a><!--about us web page address-->
+
+                <div class="dropdown">
+                     <a class="Login-btn">Login ▾</a>
+                               <div class="dropdown-content">
+                                       <a href="{{url_for('userlogin')}}">User Login</a>
+                                           <a href="{{url_for('adminlogin')}}">Admin Login</a>
+                                 </div>
+                 </div>
+            </nav>
+        </header>
+
+
+
+        <div class="container">
+            <div class="card">
+                <div class="avtar">
+                    🩺
+                </div>
+
+                <h2>Admin Registration</h2>
+
+                <form method="POST" action="/adminregsucc">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+
+                    <input type="password" placeholder="Password" name="password" required>
+
+
+
+
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+
+    </body>
+</html>
